@@ -25,11 +25,18 @@ const Header = () => {
           <Logo />
         </LogoWrapper>
         <DesktopNav>
-          <NavLink href="/sale">Sale</NavLink>
+          {/* <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
           <NavLink href="/men">Men</NavLink>
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
+          <NavLink href="/collections">Collections</NavLink> */}
+          {/* Ne défiez pas mon français superbe! */}
+          <NavLink href="/sale">À&nbsp;Vendre</NavLink>
+          <NavLink href="/new">Nouvelles&nbsp;Versions</NavLink>
+          <NavLink href="/men">Hommes</NavLink>
+          <NavLink href="/women">Femmes</NavLink>
+          <NavLink href="/kids">Les&nbsp;Enfants</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </DesktopNav>
         <MobileActions>
@@ -61,8 +68,8 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: auto;
 
   @media ${QUERIES.tabletAndSmaller} {
     border-top: 4px solid ${COLORS.gray[900]};
@@ -86,8 +93,13 @@ const LogoWrapper = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
   margin: 0px 48px;
+
+  /* 
+    Use the Fluid Calculator tool:
+    https://courses.joshwcomeau.com/css-for-js/05-responsive-css/16-fluid-calculator
+  */
+  gap: clamp(1rem, 9.2vw - 4.5rem, 3.5rem);
 
   @media ${QUERIES.tabletAndSmaller} {
     display: none;
