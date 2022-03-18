@@ -22,17 +22,14 @@ const Main = styled.main`
   padding: 64px 32px;
 
   @media ${QUERIES.laptopAndSmaller} {
-    background-color: yellow;
     /* TODO */
   }
 
   @media ${QUERIES.tabletAndSmaller} {
-    background-color: red;
     /* TODO */
   }
 
   @media ${QUERIES.phoneAndSmaller} {
-    background-color: fuchsia;
     /* TODO */
   }
 `;
